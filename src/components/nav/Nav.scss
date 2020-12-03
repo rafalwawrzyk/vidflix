@@ -1,0 +1,63 @@
+@import "../../variables/variables.scss";
+
+.navbar {
+    padding-left: 0;
+    padding-right: 0;
+    border-bottom: 5px solid $secondary-color;
+}
+
+.navbar-toggler {
+    border: none;
+    color: $base-color;
+    @media screen and (max-width: 992px) {
+        padding-right: 0;
+    }
+}
+
+.nav-item {
+    @media screen and (min-width: 992px) {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+    a {
+        color: $base-color;
+        text-decoration: none;
+        font-size: 1.5rem;
+        @media screen and (min-width: 900px) {
+            font-size: 1.3rem;
+        }
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+
+    .active-nav-elem {
+        color: $secondary-color;
+    }
+}
+
+.navbar-light .navbar-brand {
+    @media screen and (max-width: 900px) {
+        font-size: 1.7rem;
+    }
+    a {
+        color: $base-color;
+        text-decoration: none;
+    }
+    .navbar-toggler {
+        color: $base-color;
+    }
+    &:hover {
+        color: $base-color;
+    }
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: $base-color;
+    &:hover {
+        color: $base-color;
+    }
+}

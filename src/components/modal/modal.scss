@@ -1,0 +1,70 @@
+@import "../../variables/variables.scss";
+
+.movie-modal-close {
+    position: fixed;
+    right: 2rem;
+    top: 1rem;
+    cursor: pointer;
+    z-index: 100;
+    color: $base-color;
+    &:hover {
+        color: $secondary-color;
+    }
+}
+.movie-modal-container {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    z-index: 100;
+    width: 100%;
+    z-index: 99;
+    overflow-y: scroll;
+    bottom: 0;
+    .movie-modal {
+        padding: 3rem;
+        background-color: $dark-color;
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 10px;
+        margin-top: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        @media screen and (min-width: 800px) {
+            width: 60%;
+        }
+        .movie-modal-trailer {
+            width: 100%;
+        }
+        .movie-modal-image {
+            display: flex;
+            padding-bottom: 1rem;
+            max-height: 170px;
+            padding-right: 1rem;
+        }
+        .movie-modal-text {
+            display: flex;
+            flex-direction: column;
+            padding-top: 1rem;
+        }
+        img {
+            height: 100%;
+        }
+        h2 {
+            text-align: left;
+            font-family: "Monoton", cursive;
+            color: $base-color;
+            word-spacing: 0.75rem;
+        }
+        p {
+            color: $base-color;
+            text-align: left;
+        }
+        a {
+            max-width: 150px;
+        }
+    }
+}

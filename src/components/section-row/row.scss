@@ -1,0 +1,75 @@
+@import "../../variables/variables.scss";
+
+.row-section {
+    margin-bottom: 2rem;
+    .row-header {
+        text-align: left;
+        font-family: "Monoton", cursive;
+    }
+    .row {
+        margin: auto;
+    }
+
+    .slick-prev {
+        left: 0;
+        @media screen and (min-width: 1000px) {
+            left: -50px;
+        }
+    }
+
+    .image-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        &:hover {
+            img {
+                border: 2px solid $secondary-color;
+                transition: all 300ms ease-in-out;
+            }
+        }
+        img {
+            margin-left: auto;
+            margin-right: auto;
+            border-color: rgba(255, 255, 255, 0.6);
+            position: relative;
+            border: 2px solid transparent;
+            transition: all 300ms ease-in-out;
+        }
+        .image-container-title {
+            padding-top: 1rem;
+            color: $base-color;
+        }
+    }
+
+    .slick-prev,
+    .slick-next {
+        background: none;
+        width: auto;
+        height: auto;
+        z-index: 1000;
+        &::before {
+            color: $greyed-color;
+            font-size: 3rem;
+            @media screen and (min-width: 1000px) {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .slick-next {
+        right: 0;
+        @media screen and (min-width: 1000px) {
+            right: -25px;
+        }
+    }
+
+    .slick-prev {
+        left: 0;
+        @media screen and (min-width: 1000px) {
+            left: -25px;
+        }
+    }
+    .slick-track {
+        margin-left: 0;
+    }
+}

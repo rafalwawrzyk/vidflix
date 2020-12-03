@@ -1,0 +1,27 @@
+@import "../../variables/variables.scss";
+
+.jumbotron-fluid {
+    min-height: 350px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 0;
+    background-image: url("../../assets/-\ Yoko\ On.png");
+    background-size: cover;
+    background-position: center;
+    color: $base-color;
+    font-weight: bold;
+    min-height: 500px;
+    border-bottom: 5px solid $secondary-color;
+}
+
+.hero-text {
+    text-align: left;
+    font-weight: bold;
+    h1 {
+        font-size: 4rem;
+        font-family: "Monoton", cursive;
+    }
+}
